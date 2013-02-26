@@ -1,0 +1,11 @@
+html { background-color: #9fc; color: #393; }
+
+body { max-width: 960px; margin: auto; }
+
+footer { text-align: center; }
+
+.error { color: #f99; }
+
+.logging { border: 1px solid red; padding: 0.2em; }
+
+.readme { margin: 1em; padding: 1em; background-color: white; border-radius: 0.25em; box-shadow: 0.25em 0.25em 0.25em; }
