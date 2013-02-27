@@ -48,7 +48,7 @@
 <html <?php echo $html_attributes;?>>
   <head>
     <title>The Professor’s Assignments</title>
-    <link rel='stylesheet' href="Assignment_03/css/assignment_03.css"/>
+    <link rel='stylesheet' href="./Assignment_03/css/assignment_03.css"/>
   </head>
   <body>
   	<h1>The Professor’s Assignments</h1>
@@ -80,8 +80,12 @@
 					$max_file = substr($max_file, strlen($dir_path) + 1);
 				}
 				$modified_str = date('F j, Y \a\t g:i a', $max_time);
-			  echo "<h2>$dir_path: last modified $modified_str ($max_file)</h2>\n";
-				
+			  echo <<<EOD
+      <h2>
+			  <a href='$dir_path'>$dir_path</a>: last modified $modified_str ($max_file)
+		  </h2>
+
+EOD;
 				//	Find a readme file to display, if there is one
 				$readme_contents = "<h3 class='error'>Missing README file!</h3>\n";
 				$readme_files = array('README.md', 'README', 'README.txt');
@@ -98,9 +102,9 @@
 		}
 		?>
     <footer>
-      <a href=''>XHTML</a>
+      <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
       &#x2014;
-      <a href=''>CSS</a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS</a>
     </footer>
   </body>
 </html>
