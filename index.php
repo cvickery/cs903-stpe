@@ -53,7 +53,7 @@
   <body>
   	<h1>The Professor’s Assignments</h1>
     <?php
-		$dir = opendir('.x') or die("<h2 class='error'>Error: unable to open directory</h2>" .
+		$dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
 		    "</body></html>\n");
 		while ($dir_path = readdir($dir))
 		{
