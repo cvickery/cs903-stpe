@@ -3,7 +3,7 @@
 
 1. First list item
 2. Second item
-3. This is the *last* _item_
+3. This is the **last** _item_
 
   This is an indented paragraph.
   I think
