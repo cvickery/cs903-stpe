@@ -15,7 +15,7 @@
   while ($node = readdir($dir))
   {
 		if ($node[0] === '.' || $node[0] === '_') continue;
-    echo "    <p><a href='../$node'>$node</a></p>\n";
+    echo "    <h2><a href='../$node'>$node</a></h2>\n";
   }
 ?>
     <footer>
