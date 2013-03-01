@@ -20,7 +20,7 @@
 ?>
     <footer>
       <a href="http://validator.w3.org/check?uri=referer">XHTML</a>
-      —
+      — &#x2014;
       <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS</a>
     </footer>
   </body
