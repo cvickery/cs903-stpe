@@ -14,6 +14,7 @@
   $dir = opendir('..');
   while ($node = readdir($dir))
   {
+		if ($node[0] === '.' || $node[0] === '_') continue;
     echo "    <p>$node</p>\n";
   }
 ?>
