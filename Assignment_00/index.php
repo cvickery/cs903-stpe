@@ -14,7 +14,7 @@
   $dir = opendir('..');
   while ($node = readdir($dir))
   {
-    echo "      <p>$node</p>\n";
+    echo "    <p>$node</p>\n";
   }
 ?>
     <footer>
