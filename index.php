@@ -47,7 +47,7 @@
 <!DOCTYPE html>
 <html <?php echo $html_attributes;?>>
   <head>
-    <title>The Professor’s Assignment</title>
+    <title>The Professor’s Assignments</title>
     <link rel='stylesheet' href="./Assignment_03/css/assignment_03.css"/>
   </head>
   <body>
