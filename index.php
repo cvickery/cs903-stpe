@@ -55,7 +55,6 @@
   </head>
   <body>
     <h1>The Professor’s Assignments</h1>
-    <p>But the professor doesn’t know from git.</p>
     <?php
     $dir = opendir('.');// or die("<h2 class='error'>Error: unable to open directory</h2>" .
         "</body></html>\n");
