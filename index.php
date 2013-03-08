@@ -57,7 +57,7 @@
     <h1>The Professor’s Assignments</h1>
     <?php
     $dir = opendir('.');// or die("<h2 class='error'>Error: unable to open directory</h2>" .
-        "</body></html>\n");
+        //"</body></html>\n");
     while ($dir_path = readdir($dir))
     {
       if (is_dir($dir_path) && $dir_path[0] !== '.' && $dir_path[0] !== '_')
