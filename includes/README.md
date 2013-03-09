@@ -1,5 +1,5 @@
 This directory contains PHP code that gets inserted into other files using the
-_include()_, _include_once()_, _require()_, or _require_once()_ statements.
+_include()_, _include\_once()_, _require()_, or _require\_once()_ statements.
 
 See [github.net](http://www.php.net/manual/en/control-structures.intro.php) for details.
 
