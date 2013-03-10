@@ -73,7 +73,7 @@
         if ($max_time === 0)
         {
           $max_file = 'Empty Directory';
-          $max_time = filemtime($dir_path)
+          $max_time = filemtime($dir_path);
         }
         else
         {
