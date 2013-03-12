@@ -13,12 +13,12 @@
       {
         if ($node[0] !== '.' && $node[0] !== '_')
         {
-          $files = $files + scandir_r("$dir/$node")
+          $files = $files + scandir_r("$dir/$node");
         }
       }
       else
       {
-        $files["$dir/$node"] = filemtime("$dir/$node");
+        $files["$dir/$node" = filemtime("$dir/$node");
       }
     }
     return $files;
