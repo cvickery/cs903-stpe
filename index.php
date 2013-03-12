@@ -18,7 +18,7 @@
       }
       else
       {
-        $files["$dir/$node"] = filemtime("$dir/$node");
+        $files["$dir/$node" = filemtime("$dir/$node");
       }
     }
     return $files;
