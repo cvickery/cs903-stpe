@@ -1,19 +1,9 @@
 
-### This is “Assignment 1”
+### First Assignment
 
-1. First list item
-2. Second item
-3. This is the **last** _item_
+Presents the user with several paragraphs of dummy text. Hovering over a paragraph
+changes the color of the text to red, except for the fourth paragraph, which turns
+blue.
 
-  This is an indented paragraph.
-  I think
-
-> No, this is an indented
-> paragraph.
-
-And this paragraph isn’t indendted at all.
-
-#### Maybe this is good enough.
-
-Vist [The Course Web Page](http://babbage.cs.qc.cuny.edu/courses/cs903/2013_02) now!
+[Assignment 1 Web Page](http://babbage.cs.qc.cuny.edu/courses/cs903/2013_02/Assignment_01.xhtml)
 
