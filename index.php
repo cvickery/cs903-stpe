@@ -86,11 +86,11 @@ class Node_Time
 <!DOCTYPE html>
 <html <?php echo $html_attributes; ?>>
   <head>
-    <title>The Professor’s Assignments</title>
+    <title>Perfect Student’s Assignments</title>
     <link rel='stylesheet' href="./Assignment_03/css/assignment_03.css"/>
   </head>
   <body>
-    <h1>The Professor’s Assignments</h1>
+    <h1>Perfect Student’s Assignments</h1>
 <?php
     $dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
                                "</body></html>\n");
