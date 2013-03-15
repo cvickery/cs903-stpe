@@ -94,11 +94,17 @@ class Node_Time
 <?php
     $dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
                                "</body></html>\n");
+    assert('false; // the assertion failed');
+    error_log("That wasn’t a real assertion. Don’t worry about it, ok?");
     while ($dir_path = readdir($dir))
     {
       if (is_dir($dir_path) && $dir_path[0] !== '.' && $dir_path[0] !== '_')
       {
         $max_node_time = scandir_r($dir_path, null);
+        if ($max_node_time === null)
+        {
+          $max_node_time = new Node_Time($dir_path);
+        }
         $max_node = $max_node_time->node;
         $modified_str = date('F j, Y \a\t g:i a', $max_node_time->mtime);
         echo <<<EOD
