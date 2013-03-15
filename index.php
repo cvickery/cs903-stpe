@@ -13,6 +13,10 @@ class Node_Time
     $this->node = $node;
     $this->mtime = filemtime($node);
   }
+  function __toString()
+  {
+    return $this->node . ' ' . date('F j, Y \a\t g:i a', $this->mtime);
+  }
 }
 
 //  scandir_r()
@@ -22,6 +26,8 @@ class Node_Time
  */
   function scandir_r($dir, $max_node_time)
   {
+    echo "<!-- $dir, $max_node_time -->\n";
+    assert('is_dir($dir)');
     $nodes = scandir($dir);
     foreach ($nodes as $node)
     {
@@ -30,7 +36,8 @@ class Node_Time
         if ($node[0] !== '.' && $node[0] !== '_')
         {
           $return_node_time = scandir_r("$dir/$node", $max_node_time);
-          if ($return_node_time->mtime > $max_node_time->mtime)
+          if (($max_node_time === null) ||
+              ($return_node_time->mtime > $max_node_time->mtime))
           {
             $max_node_time = $return_node_time;
           }
@@ -38,7 +45,11 @@ class Node_Time
       }
       else
       {
-        if (($mtime = filemtime("$dir/$node")) > $max_node_time->mtime)
+        if ($max_node_time === null)
+        {
+          $max_node_time = new Node_Time("$dir/$node");
+        }
+        else if (($mtime = filemtime("$dir/$node")) > $max_node_time->mtime)
         {
           $max_node_time->node = "$dir/$node";
           $max_node_time->mtime = $mtime;
@@ -80,15 +91,14 @@ class Node_Time
   </head>
   <body>
     <h1>The Professor’s Assignments</h1>
-    <?php
+<?php
     $dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
                                "</body></html>\n");
     while ($dir_path = readdir($dir))
     {
       if (is_dir($dir_path) && $dir_path[0] !== '.' && $dir_path[0] !== '_')
       {
-        $max_node_time = new Node_Time($dir_path);
-        $max_node_time = scandir_r($dir_path, $max_node_time);
+        $max_node_time = scandir_r($dir_path, null);
         $max_node = $max_node_time->node;
         $modified_str = date('F j, Y \a\t g:i a', $max_node_time->mtime);
         echo <<<EOD

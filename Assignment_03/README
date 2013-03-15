@@ -1,1 +1,8 @@
-This is a less-empty project message for Assignment 3.
+### Third Assignment
+
+The third assignment implements an index page for the entire semester’s set of
+projects. Each directory under `htdocs` gets listed as an `<h2>` element with a
+link to the directory. Under each `<h2>` the README file in that directory, if present,
+is displayed.
+
+[Assignment 3 Web Page](http://babbage.cs.qc.cuny.edu/courses/cs903/2013_02/Assignment_03.xhtml)
