@@ -1,4 +1,6 @@
 _notes
 *.swp
 .project
+.settings
+.sass-cache
 error_log

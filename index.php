@@ -62,7 +62,7 @@ class Node_Time
   $mime_type = "text/html";
   $html_attributes = "lang=\"en\"";
   if (
-        array_key_exists("HTTP_ACCEPT", $_SERVER) && 
+        array_key_exists("HTTP_ACCEPT", $_SERVER) &&
         (
           stristr($_SERVER["HTTP_ACCEPT"], "application/xhtml") ||
           stristr($_SERVER["HTTP_ACCEPT"], "application/xml")
@@ -92,11 +92,28 @@ class Node_Time
   <body>
     <h1>Perfect Student’s Assignments</h1>
 <?php
+    $suffixes = ' KMGTP';
+    $error_log_size = filesize('error_log');
+    $e = 0;
+    if ($error_log_size > 0)  $e = floor(log($error_log_size, 2) / 10);
+    $n = $error_log_size / pow(2, $e * 10);
+    $d = strpos($n, '.');
+    $n = substr($n, 0, 3 + $d) . @$suffixes[$e];
+    $readme_file = is_file('README.md') ?
+        Markdown(file_get_contents('README.md')) : "<p class='error'>Missing README</p>";
+    echo <<<EOD
+      <dir class='readme'>
+        $readme_file
+        <p>The error_log file is currently $n bytes.</p>
+      </dir>
+
+EOD;
+
     $dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
                                "</body></html>\n");
     assert('false; // the assertion failed');
     error_log("That wasn’t a real assertion. Don’t worry about it, ok?");
-    error_log("OK, I won't worry about it. Thanks for the heads up");
+    error_log("OK, I won't worry about it. Thanks for the heads up!");
     while ($dir_path = readdir($dir))
     {
       if (is_dir($dir_path) && $dir_path[0] !== '.' && $dir_path[0] !== '_')
