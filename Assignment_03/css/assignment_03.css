@@ -1,11 +1,27 @@
-html { background-color: #9fc; color: #393; }
+html {
+  background-color: #999;
+  color: #393; }
 
-body { max-width: 960px; margin: auto; }
+body {
+  max-width: 960px;
+  background-color: #add8e6;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.25em; }
 
-footer { text-align: center; }
+footer {
+  text-align: center; }
 
-.error { color: #f99; }
+.error {
+  color: #f99; }
 
-.logging { border: 1px solid red; padding: 0.2em; }
+.logging {
+  border: 1px solid red;
+  padding: 0.2em; }
 
-.readme { margin: 1em; padding: 1em; background-color: white; border-radius: 0.25em; box-shadow: 0.25em 0.25em 0.25em; }
+.readme {
+  margin: 1em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 0.25em;
+  box-shadow: 0.25em 0.25em 0.25em; }
