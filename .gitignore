@@ -1,4 +1,5 @@
 _notes
 *.swp
 .project
+.settings
 error_log
