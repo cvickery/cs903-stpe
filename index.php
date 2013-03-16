@@ -96,7 +96,7 @@ class Node_Time
                                "</body></html>\n");
     assert('false; // the assertion failed');
     error_log("That wasn’t a real assertion. Don’t worry about it, ok?");
-    error_log("OK, I won't worry about it. Thanks for the heads up");
+    error_log("OK, I won't worry about it. Thanks for the heads up!");
     while ($dir_path = readdir($dir))
     {
       if (is_dir($dir_path) && $dir_path[0] !== '.' && $dir_path[0] !== '_')
