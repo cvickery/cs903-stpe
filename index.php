@@ -101,10 +101,21 @@ class Node_Time
     $n = substr($n, 0, 3 + $d) . @$suffixes[$e];
     $readme_file = is_file('README.md') ?
         Markdown(file_get_contents('README.md')) : "<p class='error'>Missing README</p>";
+    $status = <<<EOD
+    $n bytes.</p>
+    <ul>
+      <li><a href='./error_log'>View Error Log</a></li>
+      <li><a href='./clear_log.php'>Clear Error Log</a></li>
+    </ul>
+EOD;
+    if ($n == 0)
+    {
+      $status = "empty.</p>";
+    }
     echo <<<EOD
       <dir class='readme'>
         $readme_file
-        <p>The error_log file is currently $n bytes.</p>
+        <p>The error_log file is currently $status
       </dir>
 
 EOD;
