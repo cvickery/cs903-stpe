@@ -122,7 +122,7 @@ EOD;
 
     $dir = opendir('.') or die("<h2 class='error'>Error: unable to open directory</h2>" .
                                "</body></html>\n");
-    assert('false; // the assertion failed');
+    assert('is_dir("."); // the assertion failed');
     error_log("That wasn’t a real assertion. Don’t worry about it, ok?");
     error_log("OK, I won't worry about it. Thanks for the heads up!");
     while ($dir_path = readdir($dir))
