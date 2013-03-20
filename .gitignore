@@ -4,3 +4,4 @@ _notes
 .settings
 .sass-cache
 error_log
+.DS_Store
