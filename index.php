@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/New_York');
-set_include_path('includes');
+set_include_path('include');
 require_once ('markdown.php');
 
 //  class Node_Time
