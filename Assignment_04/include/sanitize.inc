@@ -23,7 +23,7 @@
     $returnVal = preg_replace("/(^|\s)'/",  "$1‘",    $returnVal);
     $returnVal = str_replace("'",           "’",      $returnVal);
     $returnVal = str_replace("--",          "—",      $returnVal);
-    $returnVal = str_replace(";",           "&#x38;", $returnVal);
+    $returnVal = str_replace(";",           "&#x3B;", $returnVal);
 
     $returnVal = htmlspecialchars($returnVal, ENT_NOQUOTES, "UTF-8", false);
 
